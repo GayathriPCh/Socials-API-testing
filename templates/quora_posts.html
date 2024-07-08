@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Quora Posts</title> <!-- Title of the HTML document -->
+</head>
+<body>
+    <h1>Enter Quora Username</h1> <!-- Heading for entering Quora username -->
+
+    <form action="{{ url_for('quora_posts') }}" method="post">
+        <!-- Form for submitting Quora username via POST method to Flask route 'quora_posts' -->
+        <input type="text" name="username" placeholder="Quora Username" required>
+        <!-- Text input field for entering Quora username, with placeholder text and required attribute -->
+
+        <button type="submit">Submit</button>
+        <!-- Submit button to submit the form -->
+    </form>
+
+    {% if content %}
+    <!-- Conditional block to check if content (latest post) exists -->
+    <h2>Latest Post</h2> <!-- Heading for displaying the latest post -->
+    <p>{{ content }}</p> <!-- Paragraph to display the content (latest post) -->
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reddit Profile</title> <!-- Title of the HTML document -->
+</head>
+<body>
+    <h1>Reddit Profile</h1> <!-- Main heading indicating the purpose of the page -->
+
+    <p><strong>Username:</strong> {{ profile['name'] }}</p>
+    <!-- Display the Reddit username using data passed from Flask (profile['name']) -->
+
+    <p><strong>Comment Karma:</strong> {{ profile['comment_karma'] }}</p>
+    <!-- Display the comment karma of the Reddit user -->
+
+    <p><strong>Link Karma:</strong> {{ profile['link_karma'] }}</p>
+    <!-- Display the link karma of the Reddit user -->
+
+    <h2>Posts</h2> <!-- Subheading for the list of posts -->
+
+    {% if posts %}
+    <!-- Check if there are posts to display -->
+
+        <ul>
+        <!-- Start an unordered list for displaying posts -->
+
+        {% for post in posts %}
+        <!-- Loop through each post in the 'posts' list passed from Flask -->
+
+            <li>{{ post['data']['title'] }}</li>
+            <!-- Display the title of each Reddit post within a list item -->
+
+        {% endfor %}
+        <!-- End of the loop through 'posts' -->
+
+        </ul>
+        <!-- End of the unordered list -->
+    
+    {% else %}
+    <!-- If there are no posts -->
+
+        <p>No posts found.</p>
+        <!-- Display a message indicating no posts are found -->
+
+    {% endif %}
+    <!-- End of the conditional statement for posts -->
+
+</body>
+</html>

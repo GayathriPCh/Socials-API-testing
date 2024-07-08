@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>LinkedIn Profile</title>  <!-- Title of the HTML document -->
+    <style>
+        /* CSS styles for the profile display */
+        body {
+            font-family: Arial, sans-serif;  /* Font family for the entire document */
+            margin: 20px;  /* Margin around the body content */
+        }
+        .profile {
+            max-width: 600px;  /* Maximum width of the profile container */
+            margin: 0 auto;  /* Center align the profile container */
+            border: 1px solid #ccc;  /* Border around the profile */
+            padding: 20px;  /* Padding inside the profile container */
+            border-radius: 5px;  /* Rounded corners for the profile container */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);  /* Box shadow for a slight elevation effect */
+        }
+        .profile h2 {
+            font-size: 24px;  /* Font size for the profile heading */
+            margin-bottom: 10px;  /* Bottom margin below the heading */
+        }
+        .profile-item {
+            margin-bottom: 10px;  /* Bottom margin for each profile item */
+        }
+        .profile-item label {
+            font-weight: bold;  /* Bold font weight for profile item labels */
+        }
+        .profile-item span {
+            margin-left: 10px;  /* Left margin for profile item values */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <h2>LinkedIn Profile</h2>  <!-- Heading for the profile section -->
+
+        <!-- Profile items displaying various profile details -->
+        <div class="profile-item">
+            <label>Name:</label>
+            <span>{{ profile.name }}</span>  <!-- Displaying profile name -->
+        </div>
+        <div class="profile-item">
+            <label>Given Name:</label>
+            <span>{{ profile.given_name }}</span>  <!-- Displaying given name -->
+        </div>
+        <div class="profile-item">
+            <label>Family Name:</label>
+            <span>{{ profile.family_name }}</span>  <!-- Displaying family name -->
+        </div>
+        <div class="profile-item">
+            <label>Picture:</label>
+            <img src="{{ profile.picture }}" alt="Profile Picture" width="100">  <!-- Displaying profile picture -->
+        </div>
+        <div class="profile-item">
+            <label>Email:</label>
+            <span>{{ profile.email }}</span>  <!-- Displaying email address -->
+        </div>
+        <div class="profile-item">
+            <label>Email Verified:</label>
+            <span>{{ 'Yes' if profile.email_verified else 'No' }}</span>  <!-- Displaying email verification status -->
+        </div>
+        <div class="profile-item">
+            <label>Locale:</label>
+            <span>{{ profile.locale }}</span>  <!-- Displaying locale/language -->
+        </div>
+    </div>
+</body>
+</html>

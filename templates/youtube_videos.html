@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>YouTube Videos</title>
+</head>
+<body>
+    <h1>YouTube Videos</h1> <!-- Heading for the page -->
+
+    <ul>
+        {% for video in videos %} <!-- Loop through each video in the 'videos' list -->
+            <li>
+                <img src="{{ video['snippet']['thumbnails']['default']['url'] }}" alt="Video Thumbnail">
+                <!-- Display video thumbnail with alt text -->
+
+                <p>Title: {{ video['snippet']['title'] }}</p>
+                <!-- Display video title -->
+
+                <p>Description: {{ video['snippet']['description'] }}</p>
+                <!-- Display video description -->
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

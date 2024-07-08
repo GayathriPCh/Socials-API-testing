@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set the font family for the body */
+            margin: 20px; /* Add margin around the body */
+            background-color: #f4f4f4; /* Set a light gray background color */
+        }
+        .profile {
+            max-width: 400px; /* Set maximum width for the profile container */
+            margin: auto; /* Center align the profile container */
+            background: white; /* White background for the profile */
+            padding: 20px; /* Add padding inside the profile container */
+            border-radius: 10px; /* Rounded corners for the profile container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+        }
+        .profile img {
+            border-radius: 50%; /* Make the profile picture circular */
+            margin-bottom: 20px; /* Add margin below the profile picture */
+        }
+        .profile h1 {
+            margin: 0; /* Remove margin around the heading */
+            font-size: 24px; /* Set font size for the heading */
+        }
+        .profile p {
+            color: #666; /* Set text color for paragraphs */
+            margin: 5px 0; /* Add margin top and bottom for paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="{{ profile.picture }}" alt="Profile Picture"> <!-- Display profile picture with alt text -->
+        <h1>{{ profile.name }}</h1> <!-- Display profile name -->
+        <p>First Name: {{ profile.given_name }}</p> <!-- Display first name -->
+        <p>Last Name: {{ profile.family_name }}</p> <!-- Display last name -->
+        <p>ID: {{ profile.id }}</p> <!-- Display profile ID -->
+    </div>
+</body>
+</html>

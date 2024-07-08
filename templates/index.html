@@ -1,0 +1,21 @@
+<!--This is the main page rendered on starting the application. It shows links to login with Linkedin, Reddit, Youtube, and links for viewing Medium and Quora posts. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login with LinkedIn, Reddit, YouTube,  Medium or Quora</h1>
+    <a href="{{ url_for('login') }}">Click here to login with LinkedIn</a>
+    <br><br>
+    <a href="{{ url_for('login_reddit') }}">Click here to login with Reddit</a>
+    <br><br>
+    <a href="{{ url_for('login_youtube') }}">Click here to login with YouTube</a>
+    <br><br>
+    <a href="{{ url_for('medium_posts') }}">Click here to view Medium posts</a>
+    <br><br>
+    <a href="{{ url_for('quora_posts') }}">Click here to view Quora posts</a>
+</body>
+</html>

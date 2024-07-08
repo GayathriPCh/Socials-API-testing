@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Medium Posts</title>  <!-- Title of the HTML document -->
+</head>
+<body>
+    <h1>Enter Medium Username</h1>  <!-- Heading prompting user action -->
+
+    <!-- Form to submit Medium username -->
+    <form action="{{ url_for('medium_posts') }}" method="post">
+        <input type="text" name="username" placeholder="Medium Username" required>  <!-- Input field for Medium username, with placeholder text -->
+        <button type="submit">Submit</button>  <!-- Submit button to initiate form submission -->
+    </form>
+
+    {% if content %}
+    <h2>Latest Post</h2>  <!-- Heading for displaying latest post -->
+    <p>{{ content }}</p>  <!-- Paragraph displaying the content of the latest Medium post -->
+    {% endif %}
+</body>
+</html>

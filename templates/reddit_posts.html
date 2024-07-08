@@ -1,0 +1,36 @@
+<!-- reddit_posts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <title>Reddit Posts</title> <!-- Title of the HTML document -->
+</head>
+<body>
+    <h1>Reddit Posts</h1> <!-- Heading for displaying Reddit posts -->
+
+    <ul>
+        {% for post in posts %}
+        <!-- Loop through each post in the 'posts' list passed from Flask -->
+
+            <li>
+                <h3>{{ post.title }}</h3>
+                <!-- Display the title of the Reddit post -->
+                
+                <p>{{ post.selftext }}</p>
+                <!-- Display the content of the Reddit post (selftext) -->
+
+                <p>Score: {{ post.score }}</p>
+                <!-- Display the score (upvotes) of the Reddit post -->
+
+                <p>Comments: {{ post.num_comments }}</p>
+                <!-- Display the number of comments on the Reddit post -->
+
+                <p>Link: <a href="{{ post.url }}">{{ post.url }}</a></p>
+                <!-- Display a clickable link to the Reddit post -->
+
+            </li>
+        {% endfor %}
+        <!-- End of the loop through 'posts' -->
+    </ul>
+</body>
+</html>
