@@ -67,20 +67,8 @@ The profile endpoint (/profile) returns JSON data in the following format:
 
 Configured Linkedin API to 
 -Allow user to login with Linkedin
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/cf8b448e-45ec-4523-b850-c0beea6b6da1)
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/54332059-cc30-47f0-bd18-686910a4224b)
-
 -Authorize Linkedin to fetch user profile
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/243885df-6c18-40f1-aac8-a68578781671)
-
 -Allow user to post to Linkedin
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/28457fc9-b0da-4efc-a942-76e913bfdc33)
-
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/0206eb8d-f3eb-4bd1-816c-5b3f870ed656)
-
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/8b9be743-7198-473b-834e-e43a0ac78e96)
-
-
 
 ## Reddit Integration with Flask Application
 
@@ -109,19 +97,10 @@ Click on the "Login with Reddit" button.
 
 ## Endpoints
 
-/login/reddit: Initiates the Reddit OAuth 2.0 flow.
-/auth/reddit/callback: Handles the Reddit OAuth 2.0 callback and retrieves access tokens.
-/reddit_profile: Displays the user's Reddit profile information.
-/reddit_posts: Fetches the user's recent posts from Reddit.
-
-
-### Output: 
-This is y profile: ![Screenshot 2024-06-10 174612](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/db876361-40c3-41e1-98e5-759a8d48eb0b)
-And these are outputs after configuring :
-![Screenshot 2024-06-10 164326](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/e41010ce-ab36-4162-89fb-f0466185d217)
-![Screenshot 2024-06-10 164336](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/a02d1e60-fd38-4ebc-b6bc-36346130df91)
-![image](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/87b1de16-ef47-4d72-b31c-9526d956ed9a)
-![Screenshot 2024-06-10 174553](https://github.com/Wallet-Hunter/social-posting-tool/assets/132088009/1a98044b-cf03-4cd8-b2e3-90d9cc133972)
+- /login/reddit: Initiates the Reddit OAuth 2.0 flow.
+- /auth/reddit/callback: Handles the Reddit OAuth 2.0 callback and retrieves access tokens.
+- /reddit_profile: Displays the user's Reddit profile information.
+- /reddit_posts: Fetches the user's recent posts from Reddit.
 
 ## Youtube Integration with Flask Application
 
